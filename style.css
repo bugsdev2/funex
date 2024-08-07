@@ -139,34 +139,36 @@ a {
     }
 
     #small-screen-menu {
-        display: none;
+        display: block;
     }
+}
 
-    /* #states button {
-        font-size: 1rem;
-    } */
-
+@media screen and (min-width: 992px) {
     #buttons button {
         display: block;
     }
 
-    #buttons button:nth-child(2) {
+    #buttons button:nth-child(1) {
         background-color: var(--red);
         color: white;
     }
 
-    #buttons div button:nth-child(3) {
+    #buttons div button:nth-child(2) {
         color: var(--red);
         border: 1px solid var(--red);
     }
 
-    #buttons div button:nth-child(3):hover {
+    #buttons div button:nth-child(2):hover {
         color: white;
         background-color: var(--red);
     }
 }
 
 @media screen and (min-width: 1234px) {
+    #small-screen-menu {
+        display: none;
+    }
+
     main {
         margin-top: 8.5rem;
     }
