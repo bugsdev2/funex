@@ -2,46 +2,176 @@
 
 :root {
     --blue: #0044be;
+    --alt-blue: #0054c5;
+    --light-blue: #3b546e;
     --red: #e80014;
+    --gray: #d7d7d7;
 }
 
 body {
     font-family: 'Poppins', 'sans-serif';
 }
 
-#banner {
-    width: 100%;
-    transform: scale(2);
-    margin-top: 1rem;
-    margin-bottom: 0.5rem;
+#search-bar img {
+    height: 105%;
+    z-index: 50;
 }
 
-@media screen and (min-width: 540px) {
-    #banner {
-        transform: scale(1);
-        margin-top: 0.5rem;
-        margin-bottom: 0;
-    }
+#search-bar input {
+    border: 3px solid var(--gray);
+    padding-left: 5rem;
+}
+
+#search-bar input::placeholder {
+    color: var(--red);
+}
+
+#search-bar input:focus {
+    z-index: 0;
+    box-shadow: none;
+}
+
+#buttons button {
+    display: none;
+}
+
+#nav {
+    display: none;
+    background-color: var(--blue);
+    color: white;
+    font-weight: bold;
+}
+
+#nav li {
+    display: flex;
+    align-items: center;
+    padding: 0 8px;
+    gap: 3px;
+}
+
+#nav a {
+    color: white;
+}
+
+#nav li:hover {
+    background-color: white;
+}
+
+#nav li:hover a {
+    color: blue;
+    text-decoration: underline;
+}
+
+#nav li:hover .vl {
+    visibility: hidden;
+}
+
+#nav .bi {
+    padding-right: 5px;
+}
+
+#nav .vl {
+    height: 2rem;
+    border-right: 1px solid gray;
+}
+
+main {
+    margin-top: 7.7rem;
+}
+
+#banner {
+    width: 100%;
 }
 
 a {
     text-decoration: none;
 }
 
+#states button {
+    color: var(--light-blue);
+    font-size: clamp(0.8rem, 2vw, 1rem);
+}
+
 .price {
     color: var(--red);
     font-weight: bold;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
 }
 
-.col > .card {
+.col .card {
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
-    min-height: 19rem;
+    min-height: 18rem;
+    transition: transform 200ms;
+    border: none;
 }
 
-.card .btn {
+.col > .card:hover {
+    transform: translateY(-3px);
+}
+
+.card button {
     background-color: var(--blue);
     font-weight: bold;
-    /* font-size: 1.05rem; */
     color: white;
+    text-wrap: nowrap;
+}
+
+.card button:hover {
+    border: 1px solid var(--blue);
+    color: var(--blue);
+}
+
+.card-title h5 {
+    font-size: 1rem;
+}
+
+.card-subtitle h6 {
+    font-size: 0.8rem;
+}
+
+.from {
+    font-size: 0.8rem;
+}
+
+@media screen and (min-width: 768px) {
+    main {
+        margin-top: 4rem;
+    }
+
+    #small-screen-menu {
+        display: none;
+    }
+
+    /* #states button {
+        font-size: 1rem;
+    } */
+
+    #buttons button {
+        display: block;
+    }
+
+    #buttons button:nth-child(2) {
+        background-color: var(--red);
+        color: white;
+    }
+
+    #buttons div button:nth-child(3) {
+        color: var(--red);
+        border: 1px solid var(--red);
+    }
+
+    #buttons div button:nth-child(3):hover {
+        color: white;
+        background-color: var(--red);
+    }
+}
+
+@media screen and (min-width: 1234px) {
+    main {
+        margin-top: 8.5rem;
+    }
+
+    #nav {
+        display: block;
+    }
 }

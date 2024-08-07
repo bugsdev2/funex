@@ -5,58 +5,137 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Funex</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
-        <header></header>
-        <main>
+        <header class="fixed-top pt-1 bg-white">
+            <div class="container-xxl py-2">
+                <div class="row align-items-center justify-content-between">
+                    <div class="logo col-3 ms-4 order-1">
+                        <a href="#">
+                            <picture>
+                                <source class="w-100" media="(max-width: 768px)" srcset="public/images/logo-sm.svg" alt="logo" />
+                                <img class="w-100" src="public/images/logo.svg" alt="logo" />
+                            </picture>
+                        </a>
+                    </div>
+                    <div id="search-bar" class="order-3 order-md-2 col-12 col-md-4 pt-2 pt-md-0">
+                        <div class="input-group align-items-center">
+                            <img class="position-absolute z-3" src="public/images/smile.png" alt="smiley" />
+                            <input class="rounded-pil rounded-pill form-control" type="text" placeholder="Search discount tickets..." name="text" />
+                        </div>
+                    </div>
+                    <div id="buttons" class="order-2 order-md-3 col-3 me-3">
+                        <div class="d-flex align-items-center justify-content-end gap-4">
+                            <a class="text-dark" href="#"><span class="bi bi-house fs-4"></span></a>
+                            <a class="text-dark" href="#"><span class="bi bi-telephone fs-4"></span></a>
+                            <div class="d-flex gap-2">
+                                <a id="small-screen-menu" href="#"><span class="bi bi-list text-dark fs-2"></span></a>
+                                <button class="btn btn-sm text-nowrap">Sign Up</button>
+                                <button class="btn btn-sm text-nowrap">Log In</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <nav id="nav">
+                <div class="container-xxl">
+                    <ol class="d-flex list-unstyled text-center small">
+                        <li>
+                            <div class="vl me-4"></div>
+                            <a href="#">Discount Tickets by State</a><a href="#" class="bi bi-chevron-down"></a>
+                            <div class="vl"></div>
+                        </li>
+                        <li>
+                            <a href="#">Everyday Discounts</a><a href="#" class="bi bi-chevron-down"></a>
+                            <div class="vl"></div>
+                        </li>
+                        <li>
+                            <a href="#">Hotels & Rental Cars</a><a href="#" class="bi bi-chevron-down"></a>
+                            <div class="vl"></div>
+                        </li>
+                        <li>
+                            <a href="#">Top Destinations</a><a href="#" class="bi bi-chevron-down"></a>
+                            <div class="vl"></div>
+                        </li>
+                        <li>
+                            <a href="#">Experiences and Sightseeing</a><a href="#" class="bi bi-chevron-down"></a>
+                            <div class="vl"></div>
+                        </li>
+                        <li>
+                            <a href="#">Movie Tickets</a><a href="#" class="bi bi-chevron-down"></a>
+                            <div class="vl"></div>
+                        </li>
+                        <li>
+                            <a href="#">Sports, Concerts and Major Events</a><a href="#" class="bi bi-chevron-down"></a>
+                            <div class="vl"></div>
+                        </li>
+                        <li>
+                            <a href="#">Gift Cards</a><a href="#" class="bi bi-chevron-down"></a>
+                            <div class="vl"></div>
+                        </li>
+                        <li>
+                            <a href="#">HR Professionals</a><a href="#" class="bi bi-chevron-down"></a>
+                            <div class="vl"></div>
+                        </li>
+                    </ol>
+                </div>
+            </nav>
+        </header>
+        <main class="pb-5">
             <section>
                 <div>
-                    <div class="container">
-                        <div class="display-6 fw-light my-3">Special Events</div>
+                    <div class="container-xxl">
+                        <div class="display-6 fw-light my-3 ms-md-5 text-black">Special Events</div>
                     </div>
                     <div class="row">
                         <div class="col">
-                            <img id="banner" width="975" src="public/images/banner.png" alt="banner" width="100%" />
+                            <picture>
+                                <source media="(max-width:768px)" srcset="public/images/banner-mobile.png" alt="banner" />
+                                <img id="banner" src="public/images/banner.png" alt="banner" />
+                            </picture>
                         </div>
                     </div>
                 </div>
             </section>
             <section>
-                <div class="container-lg my-4">
-                    <div class="buttons d-flex gap-3 justify-content-lg-center overflow-x-auto">
-                        <button class="btn-sm btn-light rounded-pill text-uppercase fw-bold text-secondary px-2 py-1 border text-nowrap small">California</button>
-                        <button class="btn-sm btn-light rounded-pill text-uppercase fw-bold text-secondary px-2 py-1 border text-nowrap small">Florida</button>
-                        <button class="btn-sm btn-light rounded-pill text-uppercase fw-bold text-secondary px-2 py-1 border text-nowrap small">New York</button>
-                        <button class="btn-sm btn-light rounded-pill text-uppercase fw-bold text-secondary px-2 py-1 border text-nowrap small">North Carolina</button>
-                        <button class="btn-sm btn-light rounded-pill text-uppercase fw-bold text-secondary px-2 py-1 border text-nowrap small">Ohio</button>
-                        <button class="btn-sm btn-light rounded-pill text-uppercase fw-bold text-secondary px-2 py-1 border text-nowrap small">Pennsylvania</button>
-                        <button class="btn-sm btn-light rounded-pill text-uppercase fw-bold text-secondary px-2 py-1 border text-nowrap small">Texas</button>
-                        <button class="btn-sm btn-light rounded-pill text-uppercase fw-bold text-secondary px-2 py-1 border text-nowrap small">Virginia</button>
+                <div class="container-lg my-3">
+                    <div id="states" class="d-flex gap-3 justify-content-lg-center overflow-x-auto">
+                        <button class="btn-sm btn-light rounded-pill text-uppercase fw-bold px-2 py-1 border text-nowrap small">California</button>
+                        <button class="btn-sm btn-light rounded-pill text-uppercase fw-bold px-2 py-1 border text-nowrap small">Florida</button>
+                        <button class="btn-sm btn-light rounded-pill text-uppercase fw-bold px-2 py-1 border text-nowrap small">New York</button>
+                        <button class="btn-sm btn-light rounded-pill text-uppercase fw-bold px-2 py-1 border text-nowrap small">North Carolina</button>
+                        <button class="btn-sm btn-light rounded-pill text-uppercase fw-bold px-2 py-1 border text-nowrap small">Ohio</button>
+                        <button class="btn-sm btn-light rounded-pill text-uppercase fw-bold px-2 py-1 border text-nowrap small">Pennsylvania</button>
+                        <button class="btn-sm btn-light rounded-pill text-uppercase fw-bold px-2 py-1 border text-nowrap small">Texas</button>
+                        <button class="btn-sm btn-light rounded-pill text-uppercase fw-bold px-2 py-1 border text-nowrap small">Virginia</button>
                     </div>
                 </div>
             </section>
-            <section class="container">
+            <section class="container-lg">
                 <div class="mx-3 row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 row-cols-xxl-5 g-4">
                     <div class="col">
                         <div class="card rounded-3">
                             <div class="card-image">
                                 <a href="#"><img class="card-img-top" src="public/images/01.knotts_berry_farm.png" alt="knotts_berry_farm" /></a>
                             </div>
-                            <div class="card-body mx-2">
-                                <div class="card-title">
-                                    <a href="#"><h5 class="fw-bold text-capitalize text-dark">Knott's berry farm</h5></a>
+                            <div class="card-body mx-2 d-flex flex-column justify-content-between">
+                                <div>
+                                    <div class="card-title">
+                                        <a href="#"><h5 class="fw-bold text-capitalize text-dark">Knott's berry farm</h5></a>
+                                    </div>
+                                    <div class="card-subtitle">
+                                        <h6>Buena Park, California</h6>
+                                    </div>
                                 </div>
-                                <div class="card-subtitle">
-                                    <h6>Buena Park, California</h6>
-                                </div>
-                                <div class="d-flex justify-content-between">
+                                <div class="d-flex justify-content-between align-items-center">
                                     <div>
-                                        <span class="small">FROM</span>
+                                        <span class="from">FROM</span>
                                         <span class="price">$87.60</span>
                                     </div>
                                     <div>
-                                        <button class="btn btn-sm">BUY NOW</button>
+                                        <button class="btn btn-sm text-nowrap">BUY NOW</button>
                                     </div>
                                 </div>
                             </div>
@@ -67,20 +146,22 @@
                             <div class="card-image">
                                 <a href="#"><img class="card-img-top" src="public/images/02.legoland_california.png" alt="knotts_berry_farm" /></a>
                             </div>
-                            <div class="card-body mx-3">
-                                <div class="card-title">
-                                    <a href="#"><h5 class="fw-bold text-capitalize text-dark">Legoland California</h5></a>
+                            <div class="card-body mx-3 mx-2 d-flex flex-column justify-content-between">
+                                <div>
+                                    <div class="card-title">
+                                        <a href="#"><h5 class="fw-bold text-capitalize text-dark">Legoland California</h5></a>
+                                    </div>
+                                    <div class="card-subtitle">
+                                        <h6>Carlsbad, California</h6>
+                                    </div>
                                 </div>
-                                <div class="card-subtitle">
-                                    <h6>Carlsbad, California</h6>
-                                </div>
-                                <div class="d-flex justify-content-between">
+                                <div class="d-flex justify-content-between align-items-center">
                                     <div>
-                                        <span class="small">FROM</span>
+                                        <span class="from">FROM</span>
                                         <span class="price">$53.99</span>
                                     </div>
                                     <div>
-                                        <button class="btn btn-sm">BUY NOW</button>
+                                        <button class="btn btn-sm text-nowrap">BUY NOW</button>
                                     </div>
                                 </div>
                             </div>
@@ -91,20 +172,22 @@
                             <div class="card-image">
                                 <a href="#"><img class="card-img-top" src="public/images/03.six_flags_magic.png" alt="knotts_berry_farm" /></a>
                             </div>
-                            <div class="card-body mx-3">
-                                <div class="card-title">
-                                    <a href="#"><h5 class="fw-bold text-capitalize text-dark">Six Flags Magic Mountain</h5></a>
+                            <div class="card-body mx-3 mx-2 d-flex flex-column justify-content-between">
+                                <div>
+                                    <div class="card-title">
+                                        <a href="#"><h5 class="fw-bold text-capitalize text-dark">Six Flags Magic Mountain</h5></a>
+                                    </div>
+                                    <div class="card-subtitle">
+                                        <h6>Valencia, California</h6>
+                                    </div>
                                 </div>
-                                <div class="card-subtitle">
-                                    <h6>Valencia, California</h6>
-                                </div>
-                                <div class="d-flex justify-content-between">
+                                <div class="d-flex justify-content-between align-items-center">
                                     <div>
-                                        <span class="small">FROM</span>
+                                        <span class="from">FROM</span>
                                         <span class="price">$47.00</span>
                                     </div>
                                     <div>
-                                        <button class="btn btn-sm">BUY NOW</button>
+                                        <button class="btn btn-sm text-nowrap">BUY NOW</button>
                                     </div>
                                 </div>
                             </div>
@@ -115,20 +198,22 @@
                             <div class="card-image">
                                 <a href="#"><img class="card-img-top" src="public/images/04.belmont_park.png" alt="knotts_berry_farm" /></a>
                             </div>
-                            <div class="card-body mx-3">
-                                <div class="card-title">
-                                    <a href="#"><h5 class="fw-bold text-capitalize text-dark">Belmont Park</h5></a>
+                            <div class="card-body mx-3 mx-2 d-flex flex-column justify-content-between">
+                                <div>
+                                    <div class="card-title">
+                                        <a href="#"><h5 class="fw-bold text-capitalize text-dark">Belmont Park</h5></a>
+                                    </div>
+                                    <div class="card-subtitle">
+                                        <h6>San Diego, California</h6>
+                                    </div>
                                 </div>
-                                <div class="card-subtitle">
-                                    <h6>San Diego, California</h6>
-                                </div>
-                                <div class="d-flex justify-content-between">
+                                <div class="d-flex justify-content-between align-items-center">
                                     <div>
-                                        <span class="small">FROM</span>
+                                        <span class="from">FROM</span>
                                         <span class="price">$47.00</span>
                                     </div>
                                     <div>
-                                        <button class="btn btn-sm">BUY NOW</button>
+                                        <button class="btn btn-sm text-nowrap">BUY NOW</button>
                                     </div>
                                 </div>
                             </div>
@@ -139,20 +224,22 @@
                             <div class="card-image">
                                 <a href="#"><img class="card-img-top" src="public/images/05.aquarium.png" alt="knotts_berry_farm" /></a>
                             </div>
-                            <div class="card-body mx-3">
-                                <div class="card-title">
-                                    <a href="#"><h5 class="fw-bold text-capitalize text-dark">Aquarium of the Pacific</h5></a>
+                            <div class="card-body mx-3 mx-2 d-flex flex-column justify-content-between">
+                                <div>
+                                    <div class="card-title">
+                                        <a href="#"><h5 class="fw-bold text-capitalize text-dark">Aquarium of the Pacific</h5></a>
+                                    </div>
+                                    <div class="card-subtitle">
+                                        <h6>Long Beach, California</h6>
+                                    </div>
                                 </div>
-                                <div class="card-subtitle">
-                                    <h6>Long Beach, California</h6>
-                                </div>
-                                <div class="d-flex justify-content-between">
+                                <div class="d-flex justify-content-between align-items-center">
                                     <div>
-                                        <span class="small">FROM</span>
+                                        <span class="from">FROM</span>
                                         <span class="price">$41.03</span>
                                     </div>
                                     <div>
-                                        <button class="btn btn-sm">BUY NOW</button>
+                                        <button class="btn btn-sm text-nowrap">BUY NOW</button>
                                     </div>
                                 </div>
                             </div>
@@ -163,20 +250,22 @@
                             <div class="card-image">
                                 <a href="#"><img class="card-img-top" src="public/images/06.castle_park.png" alt="knotts_berry_farm" /></a>
                             </div>
-                            <div class="card-body mx-3">
-                                <div class="card-title">
-                                    <a href="#"><h5 class="fw-bold text-capitalize text-dark">Castle Park</h5></a>
+                            <div class="card-body mx-3 mx-2 d-flex flex-column justify-content-between">
+                                <div>
+                                    <div class="card-title">
+                                        <a href="#"><h5 class="fw-bold text-capitalize text-dark">Castle Park</h5></a>
+                                    </div>
+                                    <div class="card-subtitle">
+                                        <h6>Riverside, California</h6>
+                                    </div>
                                 </div>
-                                <div class="card-subtitle">
-                                    <h6>Riverside, California</h6>
-                                </div>
-                                <div class="d-flex justify-content-between">
+                                <div class="d-flex justify-content-between align-items-center">
                                     <div>
-                                        <span class="small">FROM</span>
+                                        <span class="from">FROM</span>
                                         <span class="price">$52.10</span>
                                     </div>
                                     <div>
-                                        <button class="btn btn-sm">BUY NOW</button>
+                                        <button class="btn btn-sm text-nowrap">BUY NOW</button>
                                     </div>
                                 </div>
                             </div>
@@ -187,20 +276,22 @@
                             <div class="card-image">
                                 <a href="#"><img class="card-img-top" src="public/images/07.gilroy_gardens.png" alt="knotts_berry_farm" /></a>
                             </div>
-                            <div class="card-body mx-3">
-                                <div class="card-title">
-                                    <a href="#"><h5 class="fw-bold text-capitalize text-dark">Gilroy Gardens</h5></a>
+                            <div class="card-body mx-3 mx-2 d-flex flex-column justify-content-between">
+                                <div>
+                                    <div class="card-title">
+                                        <a href="#"><h5 class="fw-bold text-capitalize text-dark">Gilroy Gardens</h5></a>
+                                    </div>
+                                    <div class="card-subtitle">
+                                        <h6>Gilroy, California</h6>
+                                    </div>
                                 </div>
-                                <div class="card-subtitle">
-                                    <h6>Gilroy, California</h6>
-                                </div>
-                                <div class="d-flex justify-content-between">
+                                <div class="d-flex justify-content-between align-items-center">
                                     <div>
-                                        <span class="small">FROM</span>
+                                        <span class="from">FROM</span>
                                         <span class="price">$68.23</span>
                                     </div>
                                     <div>
-                                        <button class="btn btn-sm">BUY NOW</button>
+                                        <button class="btn btn-sm text-nowrap">BUY NOW</button>
                                     </div>
                                 </div>
                             </div>
@@ -211,20 +302,22 @@
                             <div class="card-image">
                                 <a href="#"><img class="card-img-top" src="public/images/08.busch_gardens.png" alt="knotts_berry_farm" /></a>
                             </div>
-                            <div class="card-body mx-3">
-                                <div class="card-title">
-                                    <a href="#"><h5 class="fw-bold text-capitalize text-dark">Busch Gardens</h5></a>
+                            <div class="card-body mx-3 mx-2 d-flex flex-column justify-content-between">
+                                <div>
+                                    <div class="card-title">
+                                        <a href="#"><h5 class="fw-bold text-capitalize text-dark">Busch Gardens</h5></a>
+                                    </div>
+                                    <div class="card-subtitle">
+                                        <h6>Tampa Bay, Florida</h6>
+                                    </div>
                                 </div>
-                                <div class="card-subtitle">
-                                    <h6>Tampa Bay, Florida</h6>
-                                </div>
-                                <div class="d-flex justify-content-between">
+                                <div class="d-flex justify-content-between align-items-center">
                                     <div>
-                                        <span class="small">FROM</span>
+                                        <span class="from">FROM</span>
                                         <span class="price">$68.23</span>
                                     </div>
                                     <div>
-                                        <button class="btn btn-sm">BUY NOW</button>
+                                        <button class="btn btn-sm text-nowrap">BUY NOW</button>
                                     </div>
                                 </div>
                             </div>
